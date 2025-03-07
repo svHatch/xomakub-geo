@@ -5,3 +5,8 @@ Turn a fresh Xubuntu installation into a fully-configured, beautiful, and modern
 ## License
 
 Omakub is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+# Install
+```
+eval "$(wget -qO- https://raw.githubusercontent.com/svHatch/xomakub-geo/stable/boot.sh)"
+```
