@@ -2,15 +2,15 @@
 set -e
 
 # Check the distribution name and version and abort if incompatible
-source ~/.local/share/omakub/install/check-version.sh
+source ~/.local/share/xomakub-geo/install/check-version.sh
 
 # Ask for app choices
 echo "Get ready to make a few choices..."
 source ~/.local/share/omakub/install/terminal/required/app-gum.sh >/dev/null
 source ~/.local/share/omakub/install/first-run-choices.sh
 
-# Desktop software and tweaks will only be installed if we're running Gnome
-if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
+# Desktop software and tweaks will only be installed if we're running Xfce
+if [[ "$XDG_CURRENT_DESKTOP" == *"XFCE"* ]]; then
   # Ensure computer doesn't go to sleep or lock while installing
   gsettings set org.gnome.desktop.screensaver lock-enabled false
   gsettings set org.gnome.desktop.session idle-delay 0
@@ -28,5 +28,5 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]]; then
   gsettings set org.gnome.desktop.session idle-delay 300
 else
   echo "Only installing terminal tools..."
-  source ~/.local/share/omakub/install/terminal.sh
+  source ~/.local/share/xomakub-geo/install/terminal.sh
 fi

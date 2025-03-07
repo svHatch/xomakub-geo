@@ -19,14 +19,14 @@ if [ ! -d "$HOME/.config/nvim" ]; then
 
   # Make everything match the terminal transparency
   mkdir -p ~/.config/nvim/plugin/after
-  cp ~/.local/share/omakub/configs/neovim/transparency.lua ~/.config/nvim/plugin/after/
+  cp ~/.local/share/xomakub-geo/configs/neovim/transparency.lua ~/.config/nvim/plugin/after/
 
   # Default to Tokyo Night theme
-  cp ~/.local/share/omakub/themes/tokyo-night/neovim.lua ~/.config/nvim/lua/plugins/theme.lua
+  cp ~/.local/share/xomakub-geo/themes/tokyo-night/neovim.lua ~/.config/nvim/lua/plugins/theme.lua
 fi
 
-# Replace desktop launcher with one running inside Alacritty
+# Replace desktop launcher with one running inside xfce4-terminal
 if [[ -d ~/.local/share/applications ]]; then
   sudo rm -rf /usr/share/applications/nvim.desktop
-  source ~/.local/share/omakub/applications/Neovim.sh
+  source ~/.local/share/xomakub-geo/applications/Neovim.sh
 fi
