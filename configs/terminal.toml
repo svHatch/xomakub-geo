@@ -1,0 +1,1 @@
+import = [ "~/.config/terminal/theme.toml", "~/.config/terminal/font.toml", "~/.config/terminal/font-size.toml", "~/.local/share/xomakub-geo/defaults/terminal.toml" ]
