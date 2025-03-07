@@ -9,20 +9,20 @@ ascii_art='________                  __        ___.
 '
 
 echo -e "$ascii_art"
-echo "=> Omakub is for fresh Ubuntu 24.04+ installations only!"
+echo "=> Xomakub-Geo is for fresh Xubuntu 24.04+ installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 sudo apt-get update >/dev/null
 sudo apt-get install -y git >/dev/null
 
-echo "Cloning Omakub..."
-rm -rf ~/.local/share/omakub
-git clone https://github.com/basecamp/omakub.git ~/.local/share/omakub >/dev/null
-if [[ $OMAKUB_REF != "master" ]]; then
-	cd ~/.local/share/omakub
-	git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
+echo "Cloning Xomakub-Geo..."
+rm -rf ~/.local/share/xomakub-geo
+git clone https://github.com/svHatch/xomakub-geo.git ~/.local/share/xomakub-geo >/dev/null
+if [[ $XOMAKUB_REF != "master" ]]; then
+	cd ~/.local/share/xomakub-geo
+	git fetch origin "${XOMAKUB_REF:-stable}" && git checkout "${XOMAKUB_REF:-stable}"
 	cd -
 fi
 
 echo "Installation starting..."
-source ~/.local/share/omakub/install.sh
+source ~/.local/share/xomakub-geo/install.sh
