@@ -1,5 +1,4 @@
-THEME_NAMES=("Tokyo Night" "Catppuccin" "Nord" "Everforest" "Gruvbox" "Kanagawa" "Rose Pine")
-THEME=$(gum choose "${THEME_NAMES[@]}" "<< Back" --header "Choose your theme" --height 10 | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+THEME="kanagawa" # Best theme
 
 if [ -n "$THEME" ] && [ "$THEME" != "<<-back" ]; then
   cp $XOMAKUB_PATH/themes/$THEME/terminal.toml ~/.config/terminal/theme.toml
@@ -15,4 +14,4 @@ if [ -n "$THEME" ] && [ "$THEME" != "<<-back" ]; then
   # source $XOMAKUB_PATH/themes/$THEME/chrome.sh
 fi
 
-source $XOMAKUB_PATH/bin/omakub-sub/menu.sh
+source $XOMAKUB_PATH/bin/xomakub-geo-sub/menu.sh

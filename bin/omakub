@@ -4,4 +4,4 @@ source $XOMAKUB_PATH/ascii.sh
 echo "" # Add spacing
 echo "                                 $(cat $XOMAKUB_PATH/version)"
 echo "" # Add spacing
-source $XOMAKUB_PATH/bin/omakub-sub/menu.sh
+source $XOMAKUB_PATH/bin/xomakub-geo-sub/menu.sh

@@ -21,29 +21,7 @@ set_font() {
 	sed -i "s/\"editor.fontFamily\": \".*\"/\"editor.fontFamily\": \"$font_name\"/g" ~/.config/Code/User/settings.json
 }
 
-if [ "$#" -gt 1 ]; then
-	choice=${!#}
-else
-	choice=$(gum choose "Cascadia Mono" "Fira Mono" "JetBrains Mono" "Meslo" "> Change size" "<< Back" --height 8 --header "Choose your programming font")
-fi
+set_font "CaskaydiaMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip" "ttf"
+source $XOMAKUB_PATH/bin/xomakub-geo-sub/font-size.sh
 
-case $choice in
-"Cascadia Mono")
-	set_font "CaskaydiaMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/CascadiaMono.zip" "ttf"
-	;;
-"Fira Mono")
-	set_font "FiraMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip" "otf"
-	;;
-"JetBrains Mono")
-	set_font "JetBrainsMono Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" "ttf"
-	;;
-"Meslo")
-	set_font "MesloLGS Nerd Font" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Meslo.zip" "ttf"
-	;;
-"> Change size")
-	source $XOMAKUB_PATH/bin/omakub-sub/font-size.sh
-	exit
-	;;
-esac
-
-source $XOMAKUB_PATH/bin/omakub-sub/menu.sh
+source $XOMAKUB_PATH/bin/xomakub-geo-sub/menu.sh
