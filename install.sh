@@ -6,8 +6,8 @@ source ~/.local/share/xomakub-geo/install/check-version.sh
 
 # Ask for app choices
 echo "Get ready to make a few choices..."
-source ~/.local/share/omakub/install/terminal/required/app-gum.sh >/dev/null
-source ~/.local/share/omakub/install/first-run-choices.sh
+source ~/.local/share/xomakub-geo/install/terminal/required/app-gum.sh >/dev/null
+source ~/.local/share/xomakub-geo/install/first-run-choices.sh
 
 # Desktop software and tweaks will only be installed if we're running Xfce
 if [[ "$XDG_CURRENT_DESKTOP" == *"XFCE"* ]]; then
@@ -18,10 +18,10 @@ if [[ "$XDG_CURRENT_DESKTOP" == *"XFCE"* ]]; then
   echo "Installing terminal and desktop tools..."
 
   # Install terminal tools
-  source ~/.local/share/omakub/install/terminal.sh
+  source ~/.local/share/xomakub-geo/install/terminal.sh
 
   # Install desktop tools and tweaks
-  source ~/.local/share/omakub/install/desktop.sh
+  source ~/.local/share/xomakub-geo/install/desktop.sh
 
   # Revert to normal idle and lock settings
   gsettings set org.gnome.desktop.screensaver lock-enabled true
